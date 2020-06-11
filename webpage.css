@@ -1,7 +1,12 @@
 .lol {
     color: aquamarine;
 }
-
+.jumbotron {
+    background-color: aquamarine;
+}
+.jumbotron:hover{
+    background-color: yellow;
+    animation-duration: 1s;
 body {
     background-image: url('imgs\\bg.jpg');
     background-repeat: no-repeat;
