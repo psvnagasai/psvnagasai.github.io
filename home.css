@@ -1,0 +1,31 @@
+body {
+    background-image: url('imgs\\bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+a{
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.jumbotron {
+    opacity: 0.5;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.jumbotron:hover {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0;
+}
+
+.container {
+    opacity: 1;
+}
