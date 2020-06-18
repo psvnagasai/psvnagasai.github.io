@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+<div style="padding-left: 700px; padding-right: 700px; padding-top: 100px;" class="text-center text-light">
+    <form class="form-signin " method="post">
+        {% set fname = 'imgs/'+  params['login_img']  %}
+        <img class="mb-4" src="{{url_for('static', filename = fname)}}" alt="" width="150" height="150">
+        <h1 class="h3 mb-3 font-weight-normal">Admin Login</h1>
+        <label for="uname" class="sr-only">Email address</label>
+        <input type="text" id="uname" name = "uname" class="form-control mb-2" placeholder="Username" required autofocus>
+        <label for="pass" class="sr-only">Password</label>
+        <input type="password" id="pass" name = "pass" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3 pt-4">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="mt-2 mb-3 text-light">&copy; {{ params["site_name"] }} 2020-2021</p>
+    </form>
+</div>
+</html>
+
+{% endblock %}

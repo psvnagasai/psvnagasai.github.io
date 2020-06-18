@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">Add/Edit Projects</h1>
+        <p class="lead">{{params["about"]}}</p>
+    </div>
+</div>
+
+<div style= "margin-left: 390px;  padding-left: 50px; margin-right: 1000px; background-color: aliceblue;border-radius: 25px;"
+class="py-3 my-3">
+  <h3>Basic Actions</h1>
+  <a href="/dashboard"><button class="btn btn-primary m-0">Dashboard Home</button></a>
+  <a href="/logout"><button class="btn btn-primary m-0">Logout</button></a>
+
+</div>
+
+<form class="container bg-light py-3 rounded" name="sentMessage" id="contactForm" action="/edit/{{serial_number}}" method="post" novalidate>
+    <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+            <label class="font-weight-bold pl-1">Title</label>
+            <input type="text" class="form-control" placeholder="Title" id="title" name='title' required
+                data-validation-required-message="Please enter your name." value="{{project.title}}">
+            <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+            <label class="font-weight-bold pl-1">Project Name</label>
+            <input type="text" class="form-control" placeholder="Project name" id="projname" name="projname" required
+                data-validation-required-message="Please enter your email address." value="{{project.project_name}}">
+            <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label class="font-weight-bold pl-1">Slug</label>
+            <input type="text" class="form-control" placeholder="Slug" name="slug" id="slug" required
+                data-validation-required-message="Please enter your phone number." value="{{project.slug}}">
+            <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label class="font-weight-bold pl-1">Website Link</label>
+            <input type="text" class="form-control" placeholder="Link" name="link" id="link" required
+                data-validation-required-message="Please enter your phone number." value="{{project.site}}">
+            <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+            <label class="font-weight-bold pl-1">Content</label>
+            <textarea rows="5" class="form-control" placeholder="content" name="content" id="content" required
+                data-validation-required-message="Please enter a message.">{{project.content}}</textarea>
+            <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <br>
+    <div id="success"></div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+    </div>
+</form>
+
+{% endblock %}
