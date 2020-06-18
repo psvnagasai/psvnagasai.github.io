@@ -1,3 +1,7 @@
+.login_pad {
+    padding-top: 500px;
+}
+
 body {
     background-image: url('imgs\\bg.jpg');
     background-repeat: no-repeat;

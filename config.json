@@ -1,0 +1,22 @@
+{
+    "params":
+    {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/huecomundo",
+        "prod_uri": "mysql://root:@localhost/huecomundo",
+
+        "gmail-user": "user@gmail.com",
+        "gmail-password": "gmailpass",
+        "site_name":"Naga Sai",
+        "about": "This is just a personal website of PSV Naga Sai which achieves nothing!",
+        "no_of_projects": 3,
+
+        "login_img":"login_icon.png",
+        "admin_user":"naga",
+        "admin_password": "naga"
+
+
+    }
+    
+
+}
